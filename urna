@@ -28,14 +28,28 @@ escreval("Nome do candidato2: ")
 leia(candidato2)
 escreval("Informe o numero do candidato: ")
 leia(numeroCand2)
+repita
+                 se(numeroCand2 = numeroCand1)entao
+                 escreval("Número inválido!")
+                 escreval("Informe outro número: ")
+                 leia(numeroCand2)
+                 fimse
+ate(numeroCand2 <> numeroCand1)
 limpatela
 escreval("Nome do candidato3: ")
 leia(candidato3)
 escreval("Informe o numero do candidato: ")
 leia(numeroCand3)
+repita
+                 se((numeroCand3 = numeroCand1) e (numeroCand3 = numeroCand2))entao
+                 escreval("Número inválido!")
+                 escreval("Informe outro número: ")
+                 leia(numeroCand2)
+                 fimse
+ate((numeroCand3 <> numeroCand1) e (numeroCand3 <> numeroCand2))
 limpatela
 timer(500)
-escreval("Processando.")
+escreva("Processando.")
 escreva(".")
 escreva(".")
 escreva(".")
@@ -81,10 +95,11 @@ leia(numeroCand)
 limpatela
 timer(85)
 escreval("Confirmado!")
+escreval("")
 timer(0)
 escreval("terminar a votação ? s/n")
 leia(opc)
-ate (opc = "s")
+ate ((opc = "s") ou (opc = "S"))
 limpatela
 timer(500)
 escreva("Processando")
@@ -94,4 +109,9 @@ escreva(".")
 escreval(".")
 timer(0)
 limpatela
+escreval("================Resultado==================")
+escreval("Candidato 1 ",candidato1,"-"," Votos: ",vot1)
+escreval("Candidato 2 ",candidato2,"-"," Votos: ",vot2)
+escreval("Candidato 3 ",candidato3,"-"," Votos: ",vot3)
+escreval("Votos em branco: ",votBranco)
 fimalgoritmo
