@@ -35,21 +35,24 @@ escreval("Informe o numero do candidato: ")
 leia(numeroCand3)
 limpatela
 timer(500)
-escreval(".")
-escreval(".")
-escreval(".")
-escreval(".")
-escreval(".")
-escreval(".")
-escreval(".")
-escreval(".")
+escreval("Processando.")
+escreva(".")
+escreva(".")
+escreva(".")
+escreva(".")
+escreva(".")
+escreva(".")
+escreva(".")
 timer(0)
 limpatela
+repita
 escreval("----------------------Eleição------------------------")
 escreval("Nome candidato 1: ",candidato1," Numero: ",numeroCand1)
 escreval("Nome candidato 2: ",candidato2," Numero: ",numeroCand2)
 escreval("Nome candidato 3: ",candidato3," Numero: ",numeroCand3)
-repita
+escreval("Votar em branco: 0")
+escreval("-----------------------------------------------------")
+escreval("")
 escreval("Numero do candidato: ")
 leia(numeroCand)
                  se(numeroCand = numeroCand1)entao
@@ -76,10 +79,19 @@ leia(numeroCand)
                                votBranco <- votBranco + 1
                  fimse
 limpatela
-timer(50)
+timer(85)
 escreval("Confirmado!")
 timer(0)
-escreval("terminar a votação ?")
+escreval("terminar a votação ? s/n")
 leia(opc)
 ate (opc = "s")
+limpatela
+timer(500)
+escreva("Processando")
+escreva(".")
+escreva(".")
+escreva(".")
+escreval(".")
+timer(0)
+limpatela
 fimalgoritmo
